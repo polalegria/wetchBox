@@ -1,0 +1,103 @@
+/*
+ * wetchBox
+ *
+ * Developped By: Pol Alegria (http://jquery.webscoming.com/wetchbox)
+ * Creadits: Webscoming (http://www.webscoming.com)
+ * Version: 0.1
+ */
+
+/* ==========================================================================
+   Base styles
+   ========================================================================== */
+
+  
+/* ==========================================================================
+   CheckBox
+   ========================================================================== */  
+   
+.wetchBox.checkbox {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(155, 155, 155, 0.57);
+    -webkit-border-radius: 1px;
+       -moz-border-radius: 1px;
+            border-radius: 1px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1px;
+    height: 11px;
+    margin: 0 4px 0 1px;
+    outline: 0 none;
+    position: relative;
+    width: 11px;  
+}
+
+.wetchBox.checkbox.hover {
+    border: 1px solid #B2B2B2;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) inset;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) inset;
+}
+
+.wetchBox.checkbox.checked {
+    background-color: rgba(255, 255, 255, 0.65);
+}
+
+.wetchBox.checkbox > span {
+    display: block;
+    height: 15px;
+    left: 0;
+    position: relative;
+    top: -3px;
+    width: 15px;
+}
+
+.wetchBox.checkbox > span.checked {
+    background: url("../img/checkmark.png") no-repeat -5px -3px;
+}
+
+/* ==========================================================================
+   RadioButton
+   ========================================================================== */  
+      
+.wetchBox.radio {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(155, 155, 155, 0.57);
+    -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+            border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1px;
+    height: 13px;
+    margin: 0 4px 0 1px;
+    outline: 0 none;
+    position: relative;
+    width: 13px;  
+}
+
+.wetchBox.radio.hover {
+    border: 1px solid #B2B2B2;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) inset;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) inset;
+}
+
+.wetchBox.radio.checked {
+    background-color: rgba(255, 255, 255, 0.65);
+}
+
+.wetchBox.radio > span {
+    -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+            border-radius: 50%;
+    display: block;
+    height: 5px;
+    left: 4px;
+    position: relative;
+    top: 4px;
+    width: 5px;
+}
+
+.wetchBox.radio > span.checked {
+    background: #555;
+}
