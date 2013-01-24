@@ -18,7 +18,7 @@ Include the file in your website (after your include of jQuery)
 
 ```
 <!-- Add jQuery library -->
-<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.3.min.js"><\/script>')</script>   
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>   
 <!-- Add wetchBox -->    
 <script type="text/javascript" src="jquery.wetchbox.js"></script>
 ```
@@ -26,75 +26,84 @@ Include the file in your website (after your include of jQuery)
 Create a normal input elements, checkbox and radio buttons.
 
 ```
-<!-- Add CheckBox All -->
-<input class="demo" type="checkbox" id="all" name="all" value="";> 
-<!-- Add CheckBox -->
-<input class="demo" type="checkbox" id="checkbox-1" name="checkbox-1" value="cb-1">     
-<!-- Add RadioButons -->
-<input class="demo" type="radio" id="radio-1" name="radio" value="rd-1">   
+<!-- Example checkbox with all -->
+<div class="checkbox" data-wetchbox="1">
+  <input class="demo" id="all" type="checkbox" name="all" value="all">
+  <label for="all">All</label>   
+  <input class="demo" type="checkbox" id="checkbox-1" name="checkbox-1" value="cb-1">
+  <label for="checkbox-1">Sample 1</label>
+  <input class="demo" type="checkbox" id="checkbox-2" name="checkbox-2" value="cb-2" checked="checked">
+  <label for="checkbox-2">Sample 2</label>
+  <input class="demo" type="checkbox" id="checkbox-3" name="checkbox-3" value="cb-3">
+  <label for="checkbox-3">Sample 3</label>
+</div>   
 ```       
 
 Attach wetchBox when the document is loaded. If you are not familiar with jQuery, please, read this tutorial for beginners.
 
 ```
-$(document).ready(function(){
-  $('input[type=checkbox].demo, input[type=radio].demo').wetchBox();
+$('input[type=checkbox].demo, input[type=radio].demo').wetchBox({
+  container: "div",
+  item: "span",
+  containerData: "data-id",
+  checkallData: "data-wetchbox",
+  containerClass: "wetchBox",
+  containerHoverClass: "hover",
+  checkedClass: "checked",
+  hiddenClass: "transparent",
+  checkallName: "all",
+  mobile: true  
 });
 ```
 
 ### Adjust the options (they are all optional)
 
-####debug                
-
-If true, it sets to debug mode. 
-* Boolean; Default value: false
-                         
-####checkWidth 	         
-
-Defines the width of the input. 
-* Number, String; Default value: 11
-                         
-####checkHeight 	       
-
-Defines the height of the input. 
-* Number, String; Default value: 11
-                         
-####container 	         
+####container 	
 
 Defines the container's html element. 
 * String; Default value: "div"
-                         
-####item 	               
 
-Defines the item's html element. 
+####item 	
+
+Defines the item's html element.
 * String; Default value: "span"
-                         
-####attrContainer 	     
 
-Defines the attribute property html element. 
+####containerData 	
+
+Defines the attribute property html element.
 * String; Default value: "data-id"
-                         
-####idcheckAll 	         
 
-Defines the input check all id (Only for checkboxes). 
-* String; Default value: "all"
-                         
-####containerClass 	     
+####checkallData 	
 
-Defines the container's CSS class (Change it in the CSS file also). 
+Defines the parent attribute property for checkall. 
+* String; Default value: "data-wetchbox"
+
+####containerClass 	
+
+Defines the container's CSS class. (Change it in the CSS file also). 
 * String; Default value: "wetchbox"
-                         
-####checkedClass 	       
 
-Defines the container and item checked CSS class (Change it in the CSS file also). 
+####containerHoverClass 	
+
+Defines the container's CSS class hover for older browsers. (Change it in the CSS file also). 
+* String; Default value: "wetchbox"
+
+####checkedClass 	
+
+Defines the container and item checked CSS class. (Change it in the CSS file also). 
 * String; Default value: "checked"
-                         
-####hiddenClass 	       
 
-Defines the input hidden CSS class (Change it in the CSS file also). 
-* String; Default value: "hidden"
-                         
-####forMobile 	         
+####hiddenClass 	
+
+Defines the input hidden CSS class. (Change it in the CSS file also). 
+* String; Default value: "transparent"
+
+####checkallName 	
+
+Defines the input name for checkall. 
+* String; Default value: "all"
+
+####mobile 	
 
 If false, disable plugin for mobile browsers. 
 * Boolean; Default value: true
@@ -115,7 +124,9 @@ If false, disable plugin for mobile browsers.
 
 - Built by [Webscoming](http://webscoming.com)
 - Concept and development by [Pol Alegria](http://blogs.webscoming.com/category/pol-alegria/)
-- Translate by [Rodrigo Riera](http://blogs.webscoming.com/category/rodrigo-riera/)
+- Assistant development by [Hector Escriche](http://blogs.webscoming.com/category/hector-estriche/)
+- Testing on browsers by [Darío López](#)
+- Support languages by [Rodrigo Riera](http://blogs.webscoming.com/category/rodrigo-riera/)
 
 ---
 
